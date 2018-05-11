@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from custom.entryPoints.acceso_users import index
-
+from custom.MFRC522python.Readcopy import Read as leer
+from custom.MFRC522python.Write import write as escribir
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('entryPoints/', index),
+    path('leer/', leer),
+    paht('escribir/', escribir),
 ]
