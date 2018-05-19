@@ -9,3 +9,5 @@ class Personas(models.Model):
     email= models.EmailField(max_length=255)
     is_active = models.BooleanField(default=False)
     datos = models.ManyToManyField(Datos)
+    tarjeta_uid = models.CharField(max_length=255)
+
