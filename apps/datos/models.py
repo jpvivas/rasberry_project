@@ -7,9 +7,9 @@ class Datos(models.Model):
         ('entra', 'Entra'),
         ('sale', 'Sale'),
     )
-    date_creation = models.DateField()
+    date_creation = models.DateTimeField()
     tipo = models.CharField(max_length=255, choices=tipo_list)
-    hora_ingreso = models.DateField()
+    hora_ingreso = models.DateTimeField()
     is_active = models.BooleanField(default=False)
     users = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     # personas = models.ManyToManyField(Personas)
